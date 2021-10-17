@@ -1,0 +1,543 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v16.26-s040_1, built Wed Mar 14 00:26:06 PDT 2018
+Options:	-execute setLimitedAccessFeature legacy_fects 1 -execute win -init /cad/cadence/digital_ic_design/innovus/etc/innovus/enc.tcl 
+Date:		Sat Oct 16 23:48:17 2021
+Host:		bessel1 (x86_64 w/Linux 4.9.0-6-amd64) (1core*16cpus*Intel(R) Xeon(R) CPU X5650 @ 2.67GHz 12288KB)
+OS:		Unsupported OS as /etc does not have release info
+
+License:
+		invs	Innovus Implementation System	16.2	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Sourcing startup file /cad/cadence/digital_ic_design/innovus/etc/innovus/enc.tcl
+<CMD> setLayerPreference rve_0 -color green -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_1 -color darkblue -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_2 -color slateblue -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_3 -color turquoise -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_4 -color lightgray -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_5 -color wheat -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_6 -color goldenrod -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_7 -color yellow -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_8 -color sandybrown -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_9 -color coral -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_10 -color red -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_11 -color tomato -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_12 -color firebrick -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_13 -color purple -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_14 -color violet -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> setLayerPreference rve_15 -color tan -isVisible 1 -isSelectable 1 -lineWidth 5 -stipple none
+<CMD> ::getVersion
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+Executing cmd 'win' ...
+<CMD> win
+Sourcing file "/cad/cadence/digital_ic_design/innovus/etc/innovus/enc.tcl" ...
+<CMD> set init_gnd_net VSS
+<CMD> set init_lef_file ../../LEF_file/trial_gcd.lef
+<CMD> set init_design_settop 0
+<CMD> set init_verilog counter_netlist.v
+<CMD> set init_mmmc_file Default.view
+<CMD> set init_pwr_net VDD
+<CMD> init_design
+#- Begin Load MMMC data ... (date=10/16 23:49:12, mem=512.4M)
+#- End Load MMMC data ... (date=10/16 23:49:12, total cpu=0:00:00.1, real=0:00:00.0, peak res=56.2M, current mem=512.4M)
+Default_rc_corner
+
+Loading LEF file ../../LEF_file/trial_gcd.lef ...
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M2 pitch 400.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTR' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+viaInitial starts at Sat Oct 16 23:49:12 2021
+viaInitial ends at Sat Oct 16 23:49:12 2021
+Loading view definition file from Default.view
+Reading max_timing_library timing library '/afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'AD42M2RA' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ICO' of cell 'AD42M2RA' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.001702)  has a duplicate definition (line '292888') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 292879)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.008867)  has a duplicate definition (line '292906') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 292897)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.001702)  has a duplicate definition (line '292924') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 292915)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.008867)  has a duplicate definition (line '292942') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 292933)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_fall vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.001702)  has a duplicate definition (line '292813') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 292804)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_fall vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.008867)  has a duplicate definition (line '292831') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 292822)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_fall vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.001702)  has a duplicate definition (line '292849') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 292840)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_fall vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.008867)  has a duplicate definition (line '292867') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 292858)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.001702)  has a duplicate definition (line '293463') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 293454)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.008867)  has a duplicate definition (line '293481') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 293472)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.001702)  has a duplicate definition (line '293499') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 293490)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.008867)  has a duplicate definition (line '293517') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 293508)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_fall vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.001702)  has a duplicate definition (line '293388') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 293379)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_fall vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.008867)  has a duplicate definition (line '293406') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 293397)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_fall vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.001702)  has a duplicate definition (line '293424') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 293415)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_fall vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.008867)  has a duplicate definition (line '293442') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 293433)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.001702)  has a duplicate definition (line '294038') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 294029)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.017974) and input_net_transition (0.008867)  has a duplicate definition (line '294056') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 294047)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.001702)  has a duplicate definition (line '294074') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 294065)
+**WARN: (TECHLIB-1365):	The ccsn_last_stage output_voltage_rise vector group for total_output_net_capacitance (0.181120) and input_net_transition (0.008867)  has a duplicate definition (line '294092') on pin 'S' and cell 'AD42M2RA'. The duplicate definition will be ignored. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib, Line 294083)
+Message <TECHLIB-1365> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'AD42M2RA' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'AD42M4RA' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ICO' of cell 'AD42M4RA' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'AD42M4RA' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0' of cell 'ADCSCM2R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1' of cell 'ADCSCM2R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0' of cell 'ADCSCM4R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1' of cell 'ADCSCM4R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0B' of cell 'ADCSIOM2R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1B' of cell 'ADCSIOM2R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0B' of cell 'ADCSIOM4R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1B' of cell 'ADCSIOM4R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0B' of cell 'ADCSOM2R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1B' of cell 'ADCSOM2R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0B' of cell 'ADCSOM4R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1B' of cell 'ADCSOM4R' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADFCGCM2RA' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADFCGCM4RA' is not defined in the library. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'FILEP8R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILEP64R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILEP32R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILEP16R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE8R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE6R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE64R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE4R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE3R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE32R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE16R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTR'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_090c125_wc_ccs.lib)
+Read 1077 cells in library 'uk65lscllmvbbr_090c125_wc' 
+Reading min_timing_library timing library '/afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'FILEP8R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILEP64R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILEP32R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILEP16R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE8R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE6R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE64R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILE4R'. The cell will only be used for analysis. (File /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/timing_lib/uk65lscllmvbbr_110c-40_bc_ccs.lib)
+Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 1077 cells in library 'uk65lscllmvbbr_110c-40_bc' 
+*** End library_loading (cpu=1.02min, real=0.98min, mem=426.5M, fe_cpu=1.38min, fe_real=1.90min, fe_mem=952.1M) ***
+#- Begin Load netlist data ... (date=10/16 23:50:11, mem=952.1M)
+*** Begin netlist parsing (mem=952.1M) ***
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4M8RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4M8RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4M4RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4M4RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4M2RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4M2RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4M1RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4M1RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M8RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M8RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M6RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M6RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M4RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M4RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M2RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M2RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M1RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M1RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M0RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M0RA' is defined in LEF but not in the timing library.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Created 1077 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'counter_netlist.v'
+
+*** Memory Usage v#1 (Current mem = 952.145M, initial mem = 176.445M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=952.1M) ***
+#- End Load netlist data ... (date=10/16 23:50:11, total cpu=0:00:00.1, real=0:00:01.0, peak res=241.9M, current mem=952.1M)
+Top level cell is counter.
+Hooked 2154 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell counter ...
+*** Netlist is unique.
+** info: there are 2166 modules.
+** info: there are 9 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1001.379M, initial mem = 176.445M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file './counter_sdc.sdc' ...
+Current (total cpu=0:01:25, real=0:01:56, peak res=445.4M, current mem=1118.1M)
+counter
+INFO (CTE): Constraints read successfully.
+WARNING (CTE-25): Line: 9, 10 of File ./counter_sdc.sdc : Skipped unsupported command: set_units
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:01.0, peak res=462.8M, current mem=1137.8M)
+Current (total cpu=0:01:25, real=0:01:57, peak res=462.8M, current mem=1137.8M)
+Total number of combinational cells: 668
+Total number of sequential cells: 394
+Total number of tristate cells: 15
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFM10R BUFM12R BUFM14R BUFM16R BUFM18R BUFM22RA BUFM20R BUFM24R BUFM26RA BUFM2R BUFM3R BUFM32RA BUFM40RA BUFM48RA BUFM4R BUFM5R CKBUFM1R BUFM6R BUFM8R CKBUFM12R CKBUFM16R CKBUFM20R CKBUFM22RA CKBUFM24R CKBUFM26RA CKBUFM2R CKBUFM3R CKBUFM32R CKBUFM40R CKBUFM48R CKBUFM4R CKBUFM6R CKBUFM8R
+Total number of usable buffers: 33
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVM1R CKINVM12R CKINVM16R CKINVM20R CKINVM22RA CKINVM24R CKINVM26RA CKINVM2R CKINVM3R CKINVM32R CKINVM40R CKINVM48R CKINVM4R CKINVM6R CKINVM8R INVM1R INVM10R INVM12R INVM14R INVM16R INVM18R INVM20R INVM22RA INVM24R INVM26RA INVM2R INVM3R INVM32R INVM40R INVM48R INVM4R INVM6R INVM5R INVM8R
+Total number of usable inverters: 34
+List of unusable inverters: REGKM2R REGKM1R REGKM4R INVM0R
+Total number of unusable inverters: 4
+List of identified usable delay cells: DEL1M1R DEL1M4R DEL2M1R DEL2M4R DEL3M1R DEL3M4R DEL4M1R DEL4M4R
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Importing multi-corner technology file(s) for preRoute extraction...
+../../qrcTechFile.tch
+Completed (cpu: 0:00:06.0 real: 0:00:07.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: worst_case
+    RC-Corner Name        : Default_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../../qrcTechFile.tch'
+ 
+ Analysis View: best_case
+    RC-Corner Name        : Default_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../../qrcTechFile.tch'
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+WARNING   IMPVL-159         2154  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   TECHLIB-302         20  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+WARNING   TECHLIB-1365        20  The %s vector group for %s has a duplica...
+*** Message Summary: 2216 warning(s), 0 error(s)
+
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+Free PSO.
+
+
+Info (SM2C): Status of key globals:
+	 MMMC-by-default flow     : 1
+	 Default MMMC objs envvar : 0
+	 Data portability         : 0
+	 MMMC PV Emulation        : 0
+	 MMMC debug               : 0
+	 Init_Design flow         : 1
+
+
+	 CTE SM2C global          : false
+	 Reporting view filter    : false
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+Default_rc_corner
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTR' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Loading view definition file from /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/counter/physical_design/counter_v1.dat/viewDefinition.tcl
+*** End library_loading (cpu=0.97min, real=0.93min, mem=313.0M, fe_cpu=2.56min, fe_real=3.37min, fe_mem=1352.2M) ***
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4M8RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4M8RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4M4RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4M4RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4M2RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4M2RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4M1RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4M1RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M8RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M8RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M6RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M6RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M4RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M4RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M2RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M2RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M1RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M1RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3M0RA' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3M0RA' is defined in LEF but not in the timing library.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+*** Netlist is unique.
+Loading preference file /afs/iitd.ac.in/user/e/ee/een212023/PhysicalDesign_65nm/counter/physical_design/counter_v1.dat/gui.pref.tcl ...
+**WARN: analysis view best_case not found, use default_view_setup
+**WARN: analysis view worst_case not found, use default_view_setup
+counter
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+'set_default_switching_activity' finished successfully.
+<CMD> setPlaceMode -fp false
+<CMD> placeDesign
+*** Starting placeDesign default flow ***
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 0 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.0) ***
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**INFO: Analyzing IO path groups for slack adjustment
+Effort level <high> specified for reg2reg_tmp.30278 path_group
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: counter
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+AAE DB initialization (MEM=1574.71 CPU=0:00:00.1 REAL=0:00:00.0) 
+Total number of fetched objects 12
+End delay calculation. (MEM=2206.19 CPU=0:00:00.0 REAL=0:00:00.0)
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+**INFO: Pre-place timing setting for timing analysis already disabled
+Deleted 0 physical inst  (cell - / prefix -).
+*** Starting "NanoPlace(TM) placement v#2 (mem=2192.1M)" ...
+total jobs 21406
+multi thread init TemplateIndex for each ta. thread num 1
+Wait...
+*** Build Buffered Sizing Timing Model (Used Compact Buffer Set) ...(cpu=0:00:05.4 mem=2217.9M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:07.3 mem=2253.9M) ***
+User setting net weight histogram:
+3		: 0 nets
+4		: 0 nets
+5		: 0 nets
+6   -	10	: 0 nets
+11   -	15	: 0 nets
+16   -	19	: 0 nets
+20   -	63	: 1 nets
+64   -	255	: 0 nets
+256   -	511	: 0 nets
+512+		: 0 nets
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+Scan chains were not defined.
+#std cell=9 (0 fixed + 9 movable) #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=12 #term=37 #term/net=3.08, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=5
+stdCell: 9 single + 0 double + 0 multi
+Total standard cell length = 0.0194 (mm), area = 0.0000 (mm^2)
+Estimated cell power/ground rail width = 0.338 um
+Average module density = 0.688.
+Density for the design = 0.688.
+       = stdcell_area 97 sites (35 um^2) / alloc_area 141 sites (51 um^2).
+Pin Density = 0.2624.
+            = total # of pins 37 / total area 141.
+=== lastAutoLevel = 3 
+=== macro end level: 6 ===
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2297.6M
+Iteration  2: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2297.6M
+Iteration  3: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2297.6M
+Active setup views:
+    worst_case
+Iteration  4: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2297.6M
+Iteration  5: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2297.6M
+Iteration  6: Total net bbox = 9.500e+01 (5.48e+01 4.02e+01)
+              Est.  stn bbox = 9.860e+01 (5.69e+01 4.17e+01)
+              cpu = 0:00:00.0 real = 0:00:01.0 mem = 2297.6M
+*** cost = 9.500e+01 (5.48e+01 4.02e+01) (cpu for global=0:00:00.0) real=0:00:01.0***
+Info: 0 clock gating cells identified, 0 (on average) moved
+counter
+Solver runtime cpu: 0:00:00.0 real: 0:00:00.0
+Core Placement runtime cpu: 0:00:00.0 real: 0:00:01.0
+**WARN: (IMPSP-9025):	No scan chain specified/traced.
+Type 'man IMPSP-9025' for more detail.
+*** Starting refinePlace (0:03:03 mem=2264.0M) ***
+Total net bbox length = 9.500e+01 (5.480e+01 4.020e+01) (ext = 7.820e+01)
+Density distribution unevenness ratio = 0.000%
+Move report: Detail placement moves 9 insts, mean move: 2.51 um, max move: 3.90 um
+	Max move on inst (count_reg[0]): (7.30, 6.40) --> (9.40, 4.60)
+	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 2264.0MB
+Summary Report:
+Instances move: 9 (out of 9 movable)
+Instances flipped: 0
+Mean displacement: 2.51 um
+Max displacement: 3.90 um (Instance: count_reg[0]) (7.3, 6.4) -> (9.4, 4.6)
+	Length: 20 sites, height: 1 rows, site name: CORE, cell type: DFCQM2RA
+Total net bbox length = 1.157e+02 (6.230e+01 5.340e+01) (ext = 6.990e+01)
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 2264.0MB
+*** Finished refinePlace (0:03:03 mem=2264.0M) ***
+*** End of Placement (cpu=0:00:08.5, real=0:00:09.0, mem=2264.0M) ***
+default core: bins with density >  0.75 =    0 % ( 0 / 1 )
+Density distribution unevenness ratio = 0.000%
+*** Free Virtual Timing Model ...(mem=2264.0M)
+Starting congestion repair ...
+[NR-eGR] honorMsvRouteConstraint: false
+[NR-eGR] honorClockSpecNDR      : 0
+[NR-eGR] minRouteLayer          : 2
+[NR-eGR] maxRouteLayer          : 127
+[NR-eGR] numTracksPerClockWire  : 0
+[NR-eGR] Layer1 has no routable track
+[NR-eGR] Layer2 has single uniform track structure
+[NR-eGR] Layer3 has single uniform track structure
+[NR-eGR] Layer4 has single uniform track structure
+[NR-eGR] Layer5 has single uniform track structure
+[NR-eGR] Layer6 has single uniform track structure
+[NR-eGR] Layer7 has single uniform track structure
+[NR-eGR] Layer8 has single uniform track structure
+[NR-eGR] Layer9 has single uniform track structure
+[NR-eGR] numRoutingBlks=0 numInstBlks=0 numPGBlocks=168 numBumpBlks=0 numBoundaryFakeBlks=0
+[NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
+[NR-eGR] Read numTotalNets=11  numIgnoredNets=0
+[NR-eGR] There are 1 clock nets ( 1 with NDR ).
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id 0. Nets 1 
+[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=1  numShields=0  maxHorDemand=2  maxVerDemand=2
+[NR-eGR] Pitch:  L1=720  L2=800  L3=800  L4=800  L5=1600  L6=1600  L7=3200  L8=3200  L9=17200
+[NR-eGR] Rule id 1. Nets 10 
+[NR-eGR] id=1  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
+[NR-eGR] Pitch:  L1=360  L2=400  L3=400  L4=400  L5=800  L6=800  L7=1600  L8=1600  L9=12000
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 1 net(s) in layer range [3, 4]
+[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 3.600000e+00um
+[NR-eGR] 
+[NR-eGR] Layer group 2: route 10 net(s) in layer range [2, 9]
+[NR-eGR] earlyGlobalRoute overflow of layer group 2: 0.00% H + 0.00% V. EstWL: 4.140000e+01um
+[NR-eGR] 
+[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 0.00% V
+[NR-eGR] Overflow after earlyGlobalRoute 0.00% H + 0.00% V
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Skipped repairing congestion.
+[NR-eGR] Layer1(ME1)(F) length: 0.000000e+00um, number of vias: 31
+[NR-eGR] Layer2(ME2)(V) length: 1.920000e+01um, number of vias: 31
+[NR-eGR] Layer3(ME3)(H) length: 2.400000e+01um, number of vias: 2
+[NR-eGR] Layer4(ME4)(V) length: 3.600000e+00um, number of vias: 0
+[NR-eGR] Layer5(ME5)(H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Layer6(ME6)(V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Layer7(ME7)(H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Layer8(ME8)(V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Layer9(AL_RDL)(H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Total length: 4.680000e+01um, number of vias: 64
+End of congRepair (cpu=0:00:00.1, real=0:00:00.0)
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0:17, real = 0: 0:18, mem = 2263.4M **
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+WARNING   IMPSP-9025           1  No scan chain specified/traced.          
+*** Message Summary: 2 warning(s), 0 error(s)
+
+<CMD> checkPlace counter.checkPlace
+Begin checking placement ... (start mem=2263.4M, init mem=2263.4M)
+*info: Placed = 9             
+*info: Unplaced = 0           
+Placement Density:68.79%(35/51)
+Placement Density (including fixed std cells):68.79%(35/51)
+Finished checkPlace (cpu: total=0:00:00.1, vio checks=0:00:00.0; mem=2263.4M)
+<CMD> setDrawView place
+<CMD> fit
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all > top.mtarpt
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: counter
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Extraction called for design 'counter' of instances=9 and nets=14 using extraction engine 'preRoute' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PreRoute RC Extraction called for design counter.
+RC Extraction called in multi-corner(1) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using Quantus QRC technology file ...
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 2263.383M)
+Calculate delays in BcWc mode...
+Total number of fetched objects 12
+End delay calculation. (MEM=2381.55 CPU=0:00:00.0 REAL=0:00:00.0)
+<CMD> load_timing_debug_report -name default_report top.mtarpt
+Parsing file top.mtarpt...
+**WARN: (IMPGTD-801):	File (top.mtarpt) does not contain any timing paths.
+This could be because the report is not of the correct format,
+or because it does not contain any paths (because there are no
+failing paths in the design, for instance).
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> violationBrowser -all -no_display_false
+<CMD_INTERNAL> violationBrowserClose
+Default_rc_corner
+<CMD> rcOut -spf counter.spf -rc_corner Default_rc_corner
+Dumping SPF file.....
+Created SPF File: counter.spf
+<CMD> fit
+
+*** Memory Usage v#1 (Current mem = 2326.312M, initial mem = 176.445M) ***
+*** Message Summary: 4378 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:16:25, real=1:46:48, mem=2326.3M) ---
